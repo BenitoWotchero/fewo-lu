@@ -1,0 +1,23 @@
+.image-gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    height:400px;
+  }
+  
+  .gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .gallery-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .gallery-container button {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
