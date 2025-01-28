@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+require('dotenv').config();
 
 module.exports = {
   entry: './src/index.js',
@@ -11,28 +13,29 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/i,
-        use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[path][name].[ext]',
-              },
-            },
-          ],
-        },
-        
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        REACT_APP_RECAPTCHA_SITE_KEY: JSON.stringify(process.env.REACT_APP_RECAPTCHA_SITE_KEY)
+      }
+    })
+  ],
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   devServer: {
     static: {

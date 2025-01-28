@@ -14,6 +14,13 @@ i18n
             "next": "Next",
             "imageAlt": "Vacation rental image {{number}}"
           },
+          "contactForm": {
+            "title": "Contact Us",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send"
+          },
           "aboutTitle": "About our Holiday Home",
           "aboutDescription": "Enjoy your stay in our cozy holiday home, surrounded by beautiful nature. Perfect for families or groups up to 6 people. Equipped with all comforts for a relaxing vacation, including a fully equipped kitchen, fireplace, and terrace with barbecue facilities.",
           "bookNow": "Book now:",
@@ -30,6 +37,13 @@ i18n
             "prev": "Vorheriges",
             "next": "Nächstes",
             "imageAlt": "Ferienwohnungsbild {{number}}"
+          },
+          "contactForm": {
+            "title": "Kontaktieren Sie uns",
+            "name": "Name",
+            "email": "E-Mail",
+            "message": "Nachricht",
+            "submit": "Senden"
           },
           "aboutTitle": "Über unser Ferienhaus",
           "aboutDescription": "Genießen Sie Ihren Aufenthalt in unserem gemütlichen Ferienhaus, umgeben von wunderschöner Natur. Perfekt für Familien oder Gruppen bis zu 6 Personen. Ausgestattet mit allem Komfort für einen erholsamen Urlaub, inklusive voll ausgestatteter Küche, Kamin und Terrasse mit Grillmöglichkeit.",
