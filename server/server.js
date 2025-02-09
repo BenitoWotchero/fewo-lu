@@ -14,14 +14,19 @@ app.use(bodyParser.json());
 
 // reCAPTCHA Verifizierung
 async function verifyRecaptcha(token) {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY || process.env.REACT_APP_RECAPTCHA_SECRET_KEY;
+  if (!secretKey) {
+    console.error('reCAPTCHA Secret Key ist nicht konfiguriert');
+    return false;
+  }
+  
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
   
   try {
     const response = await axios.post(verifyUrl);
     return response.data.success;
   } catch (error) {
-    console.error('reCAPTCHA verification failed', error);
+    console.error('reCAPTCHA-Verifizierung fehlgeschlagen', error);
     return false;
   }
 }
