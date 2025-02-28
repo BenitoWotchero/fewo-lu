@@ -21,7 +21,7 @@ function App() {
       </div>
       
       <div className="header">
-        <h1>{t('welcome')}</h1>
+      <h1 dangerouslySetInnerHTML={{ __html: t('welcome')}}></h1>
       </div>
 
       <main>
@@ -29,8 +29,8 @@ function App() {
           <ImageGallery />
         </section>
         <section className="description">
-          <h2>{t('aboutTitle')}</h2>
-          <p>{t('aboutDescription')}</p>
+          <h2 dangerouslySetInnerHTML={{ __html: t('aboutTitle')}}></h2>
+          <div dangerouslySetInnerHTML={{ __html: t('aboutDescription') }} />
         </section>
         <FeatureList />
         <BookingButtons />

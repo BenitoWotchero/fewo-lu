@@ -21,10 +21,13 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Form submitted with recaptchaToken:', recaptchaToken);
+    
     if (!recaptchaToken) {
-      alert('Please complete the reCAPTCHA');
+      alert(t('contactForm.recaptchaError'));
       return;
     }
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -33,11 +36,14 @@ const ContactForm = () => {
         },
         body: JSON.stringify({ ...formData, recaptchaToken }),
       });
+
       const data = await response.json();
+      
       if (response.ok) {
         alert(t('contactForm.successMessage'));
         setFormData({ name: '', email: '', message: '' });
       } else {
+        console.error('Server response:', data);
         alert(t('contactForm.errorMessage'));
       }
     } catch (error) {
@@ -47,8 +53,40 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {/* ... Bestehende Formularfelder ... */}
+    <form onSubmit={handleSubmit} className="contact-form">
+      <div className="form-group">
+        <label htmlFor="name">{t('contactForm.name')}</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">{t('contactForm.email')}</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="message">{t('contactForm.message')}</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          rows="5"
+        />
+      </div>
       <ReCAPTCHA
         sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
         onChange={handleRecaptchaChange}

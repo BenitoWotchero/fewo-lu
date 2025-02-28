@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import airbnbLogo from '../img-design/logo-airbnb.jpg';
+import bookingLogo from '../img-design/logo-booking.jpg';
 
 function BookingButtons() {
   const { t } = useTranslation();
@@ -7,27 +9,27 @@ function BookingButtons() {
   return (
     <div className="booking-buttons">
       <div className="booking-option">
-        <img src="/airbnb-logo.png" alt="AirBnB" className="platform-logo" />
+        <img src={airbnbLogo} alt="AirBnB" className="platform-logo" />
         <div className="rating-container">
           <div className="rating">4.67</div>
           <div className="rating-max">/ 5</div>
         </div>
         <div className="stars">★★★★★</div>
         <div className="rating-text">Außergewöhnlich</div>
-        <a href="https://airbnb.com/..." className="booking-button airbnb">
+        <a href="https://www.airbnb.de/rooms/904192651719812259" className="booking-button airbnb" target="_blank" rel="noopener noreferrer">
           Auf AirBnB buchen
         </a>
       </div>
 
       <div className="booking-option">
-        <img src="/booking-logo.png" alt="Booking.com" className="platform-logo" />
+        <img src={bookingLogo} alt="Booking.com" className="platform-logo" />
         <div className="rating-container">
-          <div className="rating">9.6</div>
+          <div className="rating">9.7</div>
           <div className="rating-max">/ 10</div>
         </div>
         <div className="stars">★★★★★</div>
         <div className="rating-text">Herausragend</div>
-        <a href="https://booking.com/..." className="booking-button booking">
+        <a href="https://www.booking.com/hotel/pl/mazurskie-energie.de.html" className="booking-button booking" target="_blank" rel="noopener noreferrer">
           Auf Booking.com buchen
         </a>
       </div>
