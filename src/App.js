@@ -4,7 +4,10 @@ import ImageGallery from './components/ImageGallery';
 import BookingButtons from './components/BookingButtons';
 import FeatureList from './components/FeatureList';
 import ContactForm from './components/ContactForm';
-import './styles/ImageGallery.css';
+import './styles/main.css';
+import './styles/gallery.css';
+import './styles/booking.css';
+import './styles/features.css';
 
 function App() {
   const { t, i18n } = useTranslation();

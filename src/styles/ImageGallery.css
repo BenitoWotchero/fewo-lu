@@ -1,3 +1,12 @@
+/*
+ * ACHTUNG: Diese Datei ist veraltet und wurde durch mehrere spezialisierte CSS-Dateien ersetzt!
+ * Bitte verwenden Sie stattdessen:
+ * - main.css: Für globale Stile
+ * - gallery.css: Für die Bildergalerie
+ * - booking.css: Für die Buchungsoptionen
+ * - features.css: Für die Feature-Liste
+ */
+
 :root {
   --color-accent: #2e7d32;  /* Waldgrün */
   --color-airbnb: #FF385C;  /* AirBnB Rot */
