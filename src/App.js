@@ -8,6 +8,7 @@ import './styles/main.css';
 import './styles/gallery.css';
 import './styles/booking.css';
 import './styles/features.css';
+import './styles/contact.css';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -24,19 +25,22 @@ function App() {
       </div>
       
       <div className="header">
-      <h1 dangerouslySetInnerHTML={{ __html: t('welcome')}}></h1>
+        <h1 dangerouslySetInnerHTML={{ __html: t('welcome')}}></h1>
       </div>
 
       <main>
         <section>
           <ImageGallery />
         </section>
-        <section className="description">
+        <section className="intro-text">
           <h2 dangerouslySetInnerHTML={{ __html: t('aboutTitle')}}></h2>
+          <div dangerouslySetInnerHTML={{ __html: t('introText') }} />
+        </section>
+        <BookingButtons />
+        <section className="description">
           <div dangerouslySetInnerHTML={{ __html: t('aboutDescription') }} />
         </section>
         <FeatureList />
-        <BookingButtons />
         <section className="contact">
           <ContactForm />
         </section>

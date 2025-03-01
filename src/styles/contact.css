@@ -1,0 +1,110 @@
+/* Kontaktformular-Styles */
+.contact {
+  max-width: var(--content-width);
+  margin: 0 auto var(--section-spacing);
+  padding: 0 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  left: 0;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contact-form {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #246b27;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact {
+    padding: 0 1.5rem;
+    margin-bottom: var(--section-spacing);
+  }
+  
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-form {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    margin-bottom: var(--section-spacing);
+    padding: 0 1rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+} 

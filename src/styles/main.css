@@ -3,6 +3,10 @@
   --color-airbnb: #FF385C;  /* AirBnB Rot */
   --color-booking: #003580;  /* Booking.com Blau */
   --color-text: #2c3e50;
+  --section-max-width: 1200px; /* Wird nur noch für die äußersten Container verwendet */
+  --section-spacing: 2.5rem; /* Einheitlicher Abstand zwischen Sektionen */
+  --content-width: 900px; /* Einheitliche Breite für ALLE Inhalte */
+  --container-padding: 20px; /* Konsistentes Padding für Container */
 }
 
 body {
@@ -13,12 +17,37 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .App {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: var(--container-padding);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+main > section, 
+main > .booking-buttons, 
+main > .feature-list {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--section-spacing);
+  position: relative;
+  left: 0;
 }
 
 /* Zusätzlicher Gradient-Overlay für sanfteren Übergang */
@@ -57,9 +86,43 @@ body {
   margin: 20px auto;
 }
 
-.description {
+/* Intro Text Styles */
+.intro-text {
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: var(--content-width);
+  margin: 1rem auto var(--section-spacing);
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.intro-text h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 0.8rem;
+}
+
+.intro-text div {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Description (Haupttext) */
+.description {
+  text-align: left;
+  margin: 0 auto var(--section-spacing);
+  padding: 0 2rem;
+  max-width: var(--content-width);
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.description div {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* Sprach-Auswahl */
@@ -90,20 +153,44 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  :root {
+    --section-spacing: 2rem;
+    --container-padding: 15px;
+  }
+  
+  .App {
+    padding: var(--container-padding);
+  }
+  
   .header h1 {
     font-size: 2rem;
     padding: 1rem;
   }
   
-  .description {
-    padding: 2rem;
-  }
-  
-  .description h2 {
+  .intro-text h2 {
     font-size: 1.8rem;
   }
   
-  .description p {
-    font-size: 1.1rem;
+  .intro-text, .description {
+    padding: 0 1.5rem;
+  }
+  
+  .intro-text div, .description div {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-spacing: 1.5rem;
+    --container-padding: 10px;
+  }
+  
+  .App {
+    padding: var(--container-padding);
+  }
+  
+  .intro-text, .description {
+    padding: 0 1rem;
   }
 } 

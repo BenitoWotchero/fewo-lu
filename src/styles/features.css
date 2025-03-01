@@ -1,65 +1,61 @@
-/* Feature List Styles */
+/* Feature List Styles - komplett überarbeitet mit Grid */
 .feature-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 2rem auto;
-  max-width: 1200px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 0 auto var(--section-spacing);
+  max-width: var(--content-width);
+  padding: 0 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
+  gap: 8px;
+  padding: 10px 12px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  min-width: 250px;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow: hidden;
 }
 
 .feature-icon {
-  font-size: 24px;
+  font-size: 22px;
+  flex-shrink: 0;
+  min-width: 24px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .feature-item {
-    min-width: calc(50% - 20px);
-  }
-}
-
-/* Mobile Optimierungen */
-@media screen and (max-width: 767px) {
+/* Medium screen sizes */
+@media (max-width: 800px) {
   .feature-list {
-    gap: 10px;
-    margin: 1.5rem auto 2rem;
-  }
-  
-  .feature-item {
-    flex-basis: calc(50% - 10px);
-    padding: 10px 15px;
-    min-width: unset;
-    box-sizing: border-box;
-    font-size: 0.9rem;
-  }
-  
-  .feature-icon {
-    font-size: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
-/* Extra small devices */
+/* Tablet/Mobile Sizes */
+@media (max-width: 768px) {
+  .feature-list {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Small devices */
 @media screen and (max-width: 480px) {
   .feature-list {
-    gap: 8px;
-    padding: 0 15px;
-    margin: 1.5rem auto 2rem;
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 10px;
   }
   
   .feature-item {
-    flex-basis: 100%;
     padding: 8px 12px;
+    font-size: 0.95rem;
   }
 } 

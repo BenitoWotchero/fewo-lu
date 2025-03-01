@@ -3,7 +3,13 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 5rem auto;
+  margin: 0 auto var(--section-spacing);
+  max-width: var(--content-width);
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
 }
 
 .booking-option {
@@ -13,6 +19,9 @@
   padding: 2.5rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
+  flex: 1;
+  max-width: 450px;
+  box-sizing: border-box;
 }
 
 /* Rest der Styles für die inneren Elemente */
@@ -79,25 +88,22 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 850px) {
-  .booking-buttons {
-    align-items: center;
-  }
-}
-
 @media (max-width: 1040px) {
   .booking-buttons {
     align-items: center;
   }
   
   .booking-option {
-    width: 100%;
-    max-width: 450px;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .booking-buttons {
+    padding: 0 1.5rem;
+    margin-bottom: var(--section-spacing);
+  }
+  
   .rating {
     font-size: 2.8rem;
   }
@@ -111,8 +117,9 @@
 @media screen and (max-width: 767px) {
   .booking-buttons {
     flex-direction: column;
-    margin: 2rem auto;
-    padding: 0;
+    align-items: center;
+    margin: 0 auto var(--section-spacing);
+    padding: 0 1.5rem;
   }
   
   .booking-option {
@@ -120,11 +127,10 @@
     max-width: 400px;
     margin-bottom: 20px;
     padding: 1.8rem;
-    box-sizing: border-box;
   }
   
   .booking-option:last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
   
   .platform-logo {
@@ -148,8 +154,8 @@
 /* Extra small devices */
 @media screen and (max-width: 480px) {
   .booking-buttons {
-    padding: 0 15px;
-    margin: 2rem auto;
+    padding: 0 1rem;
+    margin-bottom: var(--section-spacing);
   }
   
   .booking-option {
@@ -160,7 +166,7 @@
   }
   
   .booking-option:last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
   
   .platform-logo {

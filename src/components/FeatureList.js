@@ -5,10 +5,10 @@ function FeatureList() {
   const { t } = useTranslation();
   
   return (
-    <div className="feature-list">
+    <section className="feature-list">
       <div className="feature-item">
         <span className="feature-icon">🏠</span>
-        <span>Die ganze Unterkunft gehört Ihnen</span>
+        <span>Die ganze Unterkunft</span>
       </div>
       
       <div className="feature-item">
@@ -18,7 +18,7 @@ function FeatureList() {
 
       <div className="feature-item">
         <span className="feature-icon">🅿️</span>
-        <span>Kostenlose Parkplätze an der Unterkunft</span>
+        <span>Kostenlose Parkplätze</span>
       </div>
 
       <div className="feature-item">
@@ -35,7 +35,7 @@ function FeatureList() {
         <span className="feature-icon">🚿</span>
         <span>Eigenes Badezimmer</span>
       </div>
-    </div>
+    </section>
   );
 }
 

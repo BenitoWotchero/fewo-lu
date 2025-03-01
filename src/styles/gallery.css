@@ -1,8 +1,10 @@
 .gallery {
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
   border-radius: 15px 15px 0 0;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: var(--content-width);
+  width: 100%;
 }
 
 .gallery-container {
@@ -68,6 +70,10 @@
 }
 
 @media (max-width: 768px) {
+  .gallery {
+    margin-bottom: var(--section-spacing);
+  }
+  
   .gallery-container {
     height: 50vh;
   }
