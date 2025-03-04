@@ -20,13 +20,19 @@ function App() {
   return (
     <div className="App">
       <div className="language-selector">
-        <button onClick={() => handleLanguageChange('de')}>Deutsch</button>
-        <button onClick={() => handleLanguageChange('en')}>English</button>
+        <button onClick={() => handleLanguageChange('de')} aria-label="Deutsch" className="flag-button">🇩🇪</button>
+        <button onClick={() => handleLanguageChange('en')} aria-label="English" className="flag-button">🇬🇧</button>
       </div>
       
-      <div className="header">
-        <h1 dangerouslySetInnerHTML={{ __html: t('welcome')}}></h1>
-      </div>
+      <header className="header">
+        <div className="header-content">
+          <span className="welcome-text" dangerouslySetInnerHTML={{ __html: t('welcome').split('Lakeside')[0]}}></span>
+          <div className="title-container">
+            <h1 className="title">Lakeside Vibes</h1>
+            <span className="subtitle">Masuria</span>
+          </div>
+        </div>
+      </header>
 
       <main>
         <section>
@@ -45,8 +51,10 @@ function App() {
           <ContactForm />
         </section>
       </main>
-      <footer>
-        <p>{t('copyright')}</p>
+      <footer className="footer">
+        <div className="footer-content">
+          <p>{t('copyright')}</p>
+        </div>
       </footer>
     </div>
   );
