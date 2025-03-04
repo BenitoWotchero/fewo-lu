@@ -53,12 +53,12 @@ const ContactForm = () => {
 
   return (
     <div className="contact">
-      <h2>Dein Urlaub bei uns</h2>
-      <p className="contact-subtitle">Fragen zur Ausstattung oder Verfügbarkeit? Wir sind für dich da!</p>
+      <h2>{t('contactSection.title')}</h2>
+      <p className="contact-subtitle">{t('contactSection.subtitle')}</p>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t('contactSection.name')}</label>
             <input
               type="text"
               id="name"
@@ -70,7 +70,7 @@ const ContactForm = () => {
           </div>
           
           <div className="form-group">
-            <label htmlFor="email">E-Mail</label>
+            <label htmlFor="email">{t('contactSection.email')}</label>
             <input
               type="email"
               id="email"
@@ -83,7 +83,7 @@ const ContactForm = () => {
         </div>
         
         <div className="form-group">
-          <label htmlFor="message">Nachricht</label>
+          <label htmlFor="message">{t('contactSection.message')}</label>
           <textarea
             id="message"
             name="message"
@@ -99,7 +99,7 @@ const ContactForm = () => {
             onChange={handleRecaptchaChange}
           />
           <button type="submit" className="submit-button">
-            Anfrage senden
+            {t('contactSection.sendButton')}
           </button>
         </div>
       </form>

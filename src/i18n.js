@@ -30,7 +30,85 @@ i18n
           "bookNow": "Book now:",
           "bookOnAirbnb": "Book on AirBnB",
           "bookOnBookingCom": "Book on Booking.com",
-          "copyright": "© 2025 Your Holiday Home. All rights reserved."
+          "copyright": "© 2025 Your Holiday Home. All rights reserved.",
+          "bookingSection": {
+            "airbnbRating": "4.67",
+            "airbnbRatingText": "Exceptional",
+            "bookingComRating": "9.7",
+            "bookingComRatingText": "Outstanding",
+            "airbnbButton": "Book now",
+            "bookingComButton": "Book now"
+          },
+          "featuresSection": {
+            "title": "Features",
+            "entireAccommodation": "Entire accommodation",
+            "size": "140 m² large",
+            "freeParking": "Free parking",
+            "wifiIncluded": "WiFi included",
+            "petsAllowed": "Pets allowed",
+            "privateBathroom": "Private bathroom"
+          },
+          "contactSection": {
+            "title": "Your vacation with us",
+            "subtitle": "Questions about amenities or availability? We're here for you!",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "sendButton": "Send request"
+          }
+        }
+      },
+      pl: {
+        translation: {
+          "welcome": "Witamy w <b>Lakeside Vibes Masuria</b>",
+          "gallery": {
+            "title": "Galeria zdjęć",
+            "prev": "Poprzednie",
+            "next": "Następne",
+            "imageAlt": "Zdjęcie domu wakacyjnego {{number}}"
+          },
+          "contactForm": {
+            "title": "Kontakt",
+            "name": "Imię",
+            "email": "Email",
+            "message": "Wiadomość",
+            "submit": "Wyślij wiadomość",
+            "successMessage": "Dziękujemy za wiadomość! Wkrótce się z Tobą skontaktujemy.",
+            "errorMessage": "Przepraszamy, wystąpił błąd podczas wysyłania wiadomości. Proszę spróbować ponownie później.",
+            "recaptchaError": "Proszę wypełnić weryfikację reCAPTCHA"
+          },
+          "aboutTitle": "O naszym domu wakacyjnym",
+          "introText": "Odkryj nasz uroczy <strong>ekologiczny dom wakacyjny</strong> w sercu Mazur, z własnym plażą w Starych Juchach. Ten przestronny obiekt oferuje <strong>trzy komfortowe sypialnie</strong>, przytulny salon i w pełni wyposażoną kuchnię z nowoczesnymi udogodnieniami.",
+          "aboutDescription": "Dwie dobrze wyposażone łazienki zapewniają komfort wszystkim gościom. Dom jest idealnie położony dla miłośników przyrody, z doskonałymi możliwościami wędrówek, wędkowania i jazdy na rowerze w otaczającej przyrodzie. Po aktywnym dniu możesz odpocząć w naszym pięknym ogrodzie lub przytulnym salonie. Obiekt oferuje <strong>bezpłatne WiFi i prywatny parking</strong> dla Twojej wygody. Położony zaledwie 43 km od zabytkowej Twierdzy Boyen i otoczony atrakcjami takimi jak Indian Village i pole golfowe Talki, nasz dom łączy spokojną odległość z łatwym dostępem do lokalnych atrakcji. Wszystkie pościele i ręczniki są zapewnione na beztroski pobyt.",
+          "bookNow": "Zarezerwuj teraz:",
+          "bookOnAirbnb": "Rezerwuj na AirBnB",
+          "bookOnBookingCom": "Rezerwuj na Booking.com",
+          "copyright": "© 2025 Twój Dom Wakacyjny. Wszelkie prawa zastrzeżone.",
+          "bookingSection": {
+            "airbnbRating": "4.67",
+            "airbnbRatingText": "Wyjątkowy",
+            "bookingComRating": "9.7",
+            "bookingComRatingText": "Znakomity",
+            "airbnbButton": "Rezerwuj teraz",
+            "bookingComButton": "Rezerwuj teraz"
+          },
+          "featuresSection": {
+            "title": "Udogodnienia",
+            "entireAccommodation": "Całe zakwaterowanie",
+            "size": "140 m² powierzchni",
+            "freeParking": "Bezpłatny parking",
+            "wifiIncluded": "WiFi w cenie",
+            "petsAllowed": "Zwierzęta dozwolone",
+            "privateBathroom": "Prywatna łazienka"
+          },
+          "contactSection": {
+            "title": "Twój urlop z nami",
+            "subtitle": "Pytania dotyczące wyposażenia lub dostępności? Jesteśmy do Twojej dyspozycji!",
+            "name": "Imię",
+            "email": "Email",
+            "message": "Wiadomość",
+            "sendButton": "Wyślij zapytanie"
+          }
         }
       },
       de: {
@@ -58,11 +136,36 @@ i18n
           "bookNow": "Jetzt buchen:",
           "bookOnAirbnb": "Auf AirBnB buchen",
           "bookOnBookingCom": "Auf Booking.com buchen",
-          "copyright": "© 2025 Ihr Ferienhaus. Alle Rechte vorbehalten. IMPRESSUM. DATENSCHUTZ"
+          "copyright": "© 2025 Ihr Ferienhaus. Alle Rechte vorbehalten. IMPRESSUM. DATENSCHUTZ",
+          "bookingSection": {
+            "airbnbRating": "4.67",
+            "airbnbRatingText": "Außergewöhnlich",
+            "bookingComRating": "9.7",
+            "bookingComRatingText": "Herausragend",
+            "airbnbButton": "Jetzt buchen",
+            "bookingComButton": "Jetzt buchen"
+          },
+          "featuresSection": {
+            "title": "Ausstattung",
+            "entireAccommodation": "Die ganze Unterkunft",
+            "size": "140 m² groß",
+            "freeParking": "Kostenlose Parkplätze",
+            "wifiIncluded": "WLAN inklusive",
+            "petsAllowed": "Haustiere erlaubt",
+            "privateBathroom": "Eigenes Badezimmer"
+          },
+          "contactSection": {
+            "title": "Dein Urlaub bei uns",
+            "subtitle": "Fragen zur Ausstattung oder Verfügbarkeit? Wir sind für dich da!",
+            "name": "Name",
+            "email": "E-Mail",
+            "message": "Nachricht",
+            "sendButton": "Anfrage senden"
+          }
         }
       }
     },
-    lng: "de",
+    lng: "en",
     fallbackLng: "en",
     interpolation: {
       escapeValue: false

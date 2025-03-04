@@ -6,34 +6,35 @@ function FeatureList() {
   
   return (
     <section className="feature-list">
+      <h2>{t('featuresSection.title')}</h2>
       <div className="feature-item">
         <span className="feature-icon">🏠</span>
-        <span>Die ganze Unterkunft</span>
+        <span>{t('featuresSection.entireAccommodation')}</span>
       </div>
       
       <div className="feature-item">
         <span className="feature-icon">📏</span>
-        <span>140 m² groß</span>
+        <span>{t('featuresSection.size')}</span>
       </div>
 
       <div className="feature-item">
         <span className="feature-icon">🅿️</span>
-        <span>Kostenlose Parkplätze</span>
+        <span>{t('featuresSection.freeParking')}</span>
       </div>
 
       <div className="feature-item">
         <span className="feature-icon">📶</span>
-        <span>WLAN inklusive</span>
+        <span>{t('featuresSection.wifiIncluded')}</span>
       </div>
 
       <div className="feature-item">
         <span className="feature-icon">🐕</span>
-        <span>Haustiere erlaubt</span>
+        <span>{t('featuresSection.petsAllowed')}</span>
       </div>
 
       <div className="feature-item">
         <span className="feature-icon">🚿</span>
-        <span>Eigenes Badezimmer</span>
+        <span>{t('featuresSection.privateBathroom')}</span>
       </div>
     </section>
   );
