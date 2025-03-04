@@ -17,9 +17,9 @@ const BookingButtons = () => {
         <div className="stars">★★★★★</div>
         <div className="rating-text">{t('bookingSection.airbnbRatingText')}</div>
         <a 
-          href="https://www.airbnb.de/rooms/53756241" 
+          href="https://www.airbnb.de/rooms/904192651719812259" 
           target="_blank" 
-          rel="noopener noreferrer" 
+          rel="noopener noreferrer nofollow" 
           className="booking-button airbnb"
         >
           {t('bookingSection.airbnbButton')}
@@ -35,9 +35,9 @@ const BookingButtons = () => {
         <div className="stars">★★★★★</div>
         <div className="rating-text">{t('bookingSection.bookingComRatingText')}</div>
         <a 
-          href="https://www.booking.com/hotel/de/ferienwohnung-l.de.html" 
+          href="https://www.booking.com/hotel/pl/mazurskie-energie.de.html" 
           target="_blank" 
-          rel="noopener noreferrer" 
+          rel="noopener noreferrer nofollow" 
           className="booking-button booking"
         >
           {t('bookingSection.bookingComButton')}
