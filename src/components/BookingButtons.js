@@ -1,40 +1,47 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import airbnbLogo from '../img-design/logo-airbnb.jpg';
 import bookingLogo from '../img-design/logo-booking.jpg';
 
-function BookingButtons() {
-  const { t } = useTranslation();
-  
+const BookingButtons = () => {
   return (
     <div className="booking-buttons">
       <div className="booking-option">
-        <img src={airbnbLogo} alt="AirBnB" className="platform-logo" />
+        <img src={airbnbLogo} alt="Airbnb Logo" className="platform-logo" />
         <div className="rating-container">
-          <div className="rating">4.67</div>
-          <div className="rating-max">/ 5</div>
+          <span className="rating">4.67</span>
+          <span className="rating-max">/5</span>
         </div>
         <div className="stars">★★★★★</div>
         <div className="rating-text">Außergewöhnlich</div>
-        <a href="https://www.airbnb.de/rooms/904192651719812259" className="booking-button airbnb" target="_blank" rel="noopener noreferrer">
-          Auf AirBnB buchen
+        <a 
+          href="https://www.airbnb.de/rooms/53756241" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="booking-button airbnb"
+        >
+          Auf Airbnb buchen
         </a>
       </div>
-
+      
       <div className="booking-option">
-        <img src={bookingLogo} alt="Booking.com" className="platform-logo" />
+        <img src={bookingLogo} alt="Booking.com Logo" className="platform-logo" />
         <div className="rating-container">
-          <div className="rating">9.7</div>
-          <div className="rating-max">/ 10</div>
+          <span className="rating">9.7</span>
+          <span className="rating-max">/10</span>
         </div>
         <div className="stars">★★★★★</div>
         <div className="rating-text">Herausragend</div>
-        <a href="https://www.booking.com/hotel/pl/mazurskie-energie.de.html" className="booking-button booking" target="_blank" rel="noopener noreferrer">
+        <a 
+          href="https://www.booking.com/hotel/de/ferienwohnung-l.de.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="booking-button booking"
+        >
           Auf Booking.com buchen
         </a>
       </div>
     </div>
   );
-}
+};
 
 export default BookingButtons;

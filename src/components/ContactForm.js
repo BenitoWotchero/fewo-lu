@@ -21,7 +21,6 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted with recaptchaToken:', recaptchaToken);
     
     if (!recaptchaToken) {
       alert(t('contactForm.recaptchaError'));
@@ -53,46 +52,58 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <div className="form-group">
-        <label htmlFor="name">{t('contactForm.name')}</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">{t('contactForm.email')}</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">{t('contactForm.message')}</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          rows="5"
-        />
-      </div>
-      <ReCAPTCHA
-        sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-        onChange={handleRecaptchaChange}
-      />
-      <button type="submit">{t('contactForm.submit')}</button>
-    </form>
+    <div className="contact">
+      <h2>Dein Urlaub bei uns</h2>
+      <p className="contact-subtitle">Fragen zur Ausstattung oder Verfügbarkeit? Wir sind für dich da!</p>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          
+          <div className="form-group">
+            <label htmlFor="email">E-Mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="message">Nachricht</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="5"
+          />
+        </div>
+        <div className="form-footer">
+          <ReCAPTCHA
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+            onChange={handleRecaptchaChange}
+          />
+          <button type="submit" className="submit-button">
+            Anfrage senden
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

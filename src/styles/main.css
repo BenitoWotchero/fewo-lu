@@ -4,9 +4,10 @@
   --color-booking: #003580;  /* Booking.com Blau */
   --color-text: #2c3e50;
   --section-max-width: 1200px; /* Wird nur noch für die äußersten Container verwendet */
-  --section-spacing: 2.5rem; /* Einheitlicher Abstand zwischen Sektionen */
+  --section-spacing: 4rem; /* Erhöhter Abstand für bessere Lesbarkeit */
   --content-width: 900px; /* Einheitliche Breite für ALLE Inhalte */
-  --container-padding: 20px; /* Konsistentes Padding für Container */
+  --container-padding: 2rem;
+  --section-inner-spacing: 2rem; /* Neuer Abstand für innere Elemente */
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 }
 
 .App {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--container-padding);
@@ -51,7 +53,29 @@ main > .feature-list {
   margin-right: auto;
   margin-bottom: var(--section-spacing);
   position: relative;
-  left: 0;
+}
+
+.gallery {
+  max-width: 100% !important;
+  margin-bottom: calc(var(--section-spacing) * 0.25) !important;
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: var(--section-spacing);
+}
+
+.intro-text h2 {
+  margin-bottom: var(--section-inner-spacing);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.description {
+  padding: 0;
+  margin-bottom: var(--section-spacing);
+  line-height: 1.8;
 }
 
 /* Zusätzlicher Gradient-Overlay für sanfteren Übergang */
@@ -68,10 +92,11 @@ main > .feature-list {
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   text-align: center;
   padding: 2rem 0 1.5rem;
-  position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .header-content {
@@ -179,7 +204,7 @@ main > .feature-list {
 
 .footer {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: -4rem;
   padding: 1.5rem 0;
   text-align: center;
 }
@@ -196,8 +221,9 @@ main > .feature-list {
 /* Responsive Styles */
 @media (max-width: 768px) {
   :root {
-    --section-spacing: 2rem;
-    --container-padding: 15px;
+    --section-spacing: 3rem;
+    --container-padding: 1.5rem;
+    --section-inner-spacing: 1.5rem;
   }
   
   .App {
@@ -224,7 +250,7 @@ main > .feature-list {
   }
   
   .footer {
-    margin-top: 2rem;
+    margin-top: -4rem;
     padding: 1rem 0;
   }
   
@@ -242,7 +268,7 @@ main > .feature-list {
   }
   
   .intro-text, .description {
-    padding: 0 1.5rem;
+    padding: 0;
   }
   
   .intro-text div, .description div {
@@ -252,8 +278,9 @@ main > .feature-list {
 
 @media (max-width: 480px) {
   :root {
-    --section-spacing: 1.5rem;
-    --container-padding: 10px;
+    --section-spacing: 2.5rem;
+    --container-padding: 1rem;
+    --section-inner-spacing: 1rem;
   }
   
   .App {
@@ -274,10 +301,10 @@ main > .feature-list {
   }
   
   .footer {
-    margin-top: 1.5rem;
+    margin-top: -4rem;
   }
   
   .intro-text, .description {
-    padding: 0 1rem;
+    padding: 0;
   }
 } 

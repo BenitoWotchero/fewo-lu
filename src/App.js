@@ -35,7 +35,7 @@ function App() {
       </header>
 
       <main>
-        <section>
+        <section className="gallery">
           <ImageGallery />
         </section>
         <section className="intro-text">
