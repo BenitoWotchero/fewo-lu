@@ -115,16 +115,17 @@
 @media (max-width: 768px) {
   .booking-buttons {
     flex-direction: column;
-    gap: calc(var(--section-inner-spacing) * 0.75);
+    gap: 1.5rem;
   }
   
   .booking-option {
-    padding: calc(var(--section-inner-spacing) * 0.75);
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .platform-logo {
     height: 28px;
-    margin-bottom: calc(var(--section-inner-spacing) * 0.75);
+    margin-bottom: 1rem;
   }
   
   .rating {
@@ -137,31 +138,38 @@
   
   .stars {
     font-size: 1.2rem;
-    margin: calc(var(--section-inner-spacing) * 0.2) 0;
+    margin: 0.5rem 0;
   }
   
   .rating-text {
-    margin: calc(var(--section-inner-spacing) * 0.2) 0 calc(var(--section-inner-spacing) * 0.75);
+    margin: 0.5rem 0 1.25rem;
   }
   
   .booking-button {
     width: 100%;
-    padding: 0.75rem 1.25rem;
+    max-width: 85%;
+    min-width: unset;
+    padding: 0.75rem 1rem;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 480px) {
   .booking-buttons {
-    gap: calc(var(--section-inner-spacing) * 0.5);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
   }
   
   .booking-option {
-    padding: calc(var(--section-inner-spacing) * 0.5);
+    padding: 1.25rem 1rem;
+    margin-bottom: 0;
   }
   
   .platform-logo {
     height: 24px;
-    margin-bottom: calc(var(--section-inner-spacing) * 0.5);
+    margin-bottom: 0.75rem;
   }
   
   .rating {
@@ -170,11 +178,12 @@
   
   .rating-text {
     font-size: 0.9rem;
-    margin: calc(var(--section-inner-spacing) * 0.15) 0 calc(var(--section-inner-spacing) * 0.5);
+    margin: 0.4rem 0 1rem;
   }
   
   .booking-button {
     font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1rem;
+    max-width: 90%;
   }
 } 

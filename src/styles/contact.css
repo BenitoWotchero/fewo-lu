@@ -135,7 +135,7 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .contact {
-    padding: 0 0.1rem;
+    padding: 0;
   }
 
   .contact h2 {
@@ -169,7 +169,7 @@
 
 @media (max-width: 480px) {
   .contact {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .contact-form {

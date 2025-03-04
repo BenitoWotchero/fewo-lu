@@ -12,7 +12,7 @@ import './styles/contact.css';
 
 // SVG-Flaggen als Komponenten
 const UKFlag = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="26" height="13">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10">
     <clipPath id="uk">
       <path d="M0,0 v30 h60 v-30 z"/>
     </clipPath>
@@ -25,7 +25,7 @@ const UKFlag = () => (
 );
 
 const PolishFlag = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10" width="24" height="15">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10" width="20" height="12">
     <rect width="16" height="10" fill="#fff"/>
     <rect width="16" height="5" y="5" fill="#dc143c"/>
     <rect width="16" height="10" fill="none" stroke="#000" strokeWidth="0.5"/>
@@ -33,7 +33,7 @@ const PolishFlag = () => (
 );
 
 const GermanFlag = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="25" height="15">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="20" height="12">
     <rect width="5" height="3" y="0" x="0" fill="#000"/>
     <rect width="5" height="2" y="1" x="0" fill="#DD0000"/>
     <rect width="5" height="1" y="2" x="0" fill="#FFCE00"/>
