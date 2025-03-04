@@ -12,12 +12,11 @@ import 'swiper/css/pagination';
 function ImageGallery() {
   const { t } = useTranslation();
 
-  const images = [
-    { src: require('../img/0.jpg'), number: 1 },
-    { src: require('../img/1.jpg'), number: 2 },
-    { src: require('../img/2.jpg'), number: 3 },
-    { src: require('../img/3.jpg'), number: 4 }
-  ];
+  // Generiere ein Array mit Bildern von 1.jpg bis 40.jpg
+  const images = Array.from({ length: 40 }, (_, i) => ({
+    src: require(`../img/${i + 1}.jpg`),
+    number: i + 1
+  }));
 
   return (
     <div className="gallery">
